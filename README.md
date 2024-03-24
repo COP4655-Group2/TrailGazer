@@ -13,6 +13,12 @@ CodePath iOS102 Module 7-10 Group Project
 
 ## Overview
 
+****PROGRESS GIF AS OF WEEK 2****
+![Progress GIF](https://github.com/COP4655-Group2/TrailGazer/assets/24413909/0fb68d0e-eff5-4562-9d63-110e0e9d9e63)
+
+
+
+
 ### Description
 
 TrailGazer is a dynamic running app designed to allow users to capture stunning moments during their runs. The app's primary aim is to inspire users to venture outdoors, encouraging exploration of the scenic views they traverse while also working as a regular running app that tracks the distance and pace you run at.
@@ -32,24 +38,24 @@ TrailGazer is a dynamic running app designed to allow users to capture stunning 
 
 **Required Must-have Stories**
 
-* User can create a new account
-* User can login to account
-* User can upload pictures
-* User can check location of pictures on a map
-* User can check distance traveled per day
-* User can check exercise statistics per day
+* [x] User can create a new account
+* [] User can login to account
+* [] User can upload pictures
+* [] User can check location of pictures on a map
+* [] User can check distance traveled per day
+* [] User can check exercise statistics per day
 
 **Optional Nice-to-have Stories**
 
-* User can persist user information across working sessions
-* User can persist user log in credentials on multiple app launches
-* User can change their app theme to dark mode
-* User can put a profile picture
-* User can check average exercising statistics
-* User can customize personal goals
-* User can add friends
-* User can see friends' pictures
-* User can like pictures
+* [] User can persist user information across working sessions
+* [] User can persist user log in credentials on multiple app launches
+* [] User can change their app theme to dark mode
+* [] User can put a profile picture
+* [] User can check average exercising statistics
+* [] User can customize personal goals
+* [] User can add friends
+* [] User can see friends' pictures
+* [] User can like pictures
 
 ### 2. Screen Archetypes
 
