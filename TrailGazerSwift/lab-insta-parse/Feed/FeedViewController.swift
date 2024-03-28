@@ -24,9 +24,9 @@ class FeedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.allowsSelection = false
+        //tableView.delegate = self
+        //tableView.dataSource = self
+        //tableView.allowsSelection = false
     }
 
     override func viewWillAppear(_ animated: Bool) {
