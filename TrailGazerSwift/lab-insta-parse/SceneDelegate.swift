@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  lab-insta-parse
-//
-//  Created by Charlie Hieger on 10/29/22.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
