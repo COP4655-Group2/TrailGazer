@@ -312,10 +312,10 @@
                                 <action selector="onLogOutTapped:" destination="D49-nA-hPQ" id="PF3-L7-hru"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="plus.app" catalog="system" id="nbY-mp-bGb">
+                        <barButtonItem key="rightBarButtonItem" image="camera" catalog="system" id="nbY-mp-bGb">
                             <color key="tintColor" systemColor="labelColor"/>
                             <connections>
-                                <segue destination="3KS-34-J8g" kind="show" id="oL8-b8-bAN"/>
+                                <segue destination="3KS-34-J8g" kind="show" id="aRu-80-cGf"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -339,7 +339,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="FilmotypeJade-Regular" family="Filmotype Jade" pointSize="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="34"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -412,6 +412,12 @@
                                     <action selector="onPickedImageTapped:" destination="3KS-34-J8g" id="MeY-Zk-wat"/>
                                 </connections>
                             </barButtonItem>
+                            <barButtonItem image="camera.fill" catalog="system" id="STC-cN-juH">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="onTakePhotoTapped:" destination="3KS-34-J8g" id="L4a-wa-sYw"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
@@ -454,8 +460,11 @@
                                 <action selector="onLogOutTapped:" destination="B7P-0a-zzW" id="Kig-5p-mAb"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="plus.app" catalog="system" id="m6U-CZ-cR8">
+                        <barButtonItem key="rightBarButtonItem" image="camera" catalog="system" id="m6U-CZ-cR8">
                             <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <segue destination="3KS-34-J8g" kind="show" id="ACD-It-ulK"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -493,6 +502,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qFa-44-6En">
                         <rect key="frame" x="0.0" y="47" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -504,12 +516,16 @@
             <point key="canvasLocation" x="1057" y="1428"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ACD-It-ulK"/>
+    </inferredMetricsTieBreakers>
     <resources>
+        <image name="camera" catalog="system" width="128" height="93"/>
+        <image name="camera.fill" catalog="system" width="128" height="93"/>
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="photo" catalog="system" width="128" height="93"/>
         <image name="photo.artframe" catalog="system" width="128" height="93"/>
-        <image name="plus.app" catalog="system" width="128" height="114"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
