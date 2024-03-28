@@ -6,6 +6,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         static let loginNavigationControllerIdentifier = "LoginNavigationController"
         static let feedNavigationControllerIdentifier = "FeedNavigationController"
         static let storyboardIdentifier = "Main"
+        static let tabBarControllerIdentifier = "TabBarController"
+        
     }
 
     var window: UIWindow?
@@ -33,7 +35,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     private func login() {
         let storyboard = UIStoryboard(name: Constants.storyboardIdentifier, bundle: nil)
-        self.window?.rootViewController = storyboard.instantiateViewController(withIdentifier: Constants.feedNavigationControllerIdentifier)
+        self.window?.rootViewController = storyboard.instantiateViewController(withIdentifier: Constants.tabBarControllerIdentifier)
     }
 
     private func logOut() {

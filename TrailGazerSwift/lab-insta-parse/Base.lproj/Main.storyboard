@@ -224,7 +224,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="if7-R7-g8V">
-                                <rect key="frame" x="0.0" y="47" width="390" height="797"/>
+                                <rect key="frame" x="0.0" y="91" width="390" height="753"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="527" id="9qC-nW-7MS" customClass="PostCell" customModule="TrailGazer" customModuleProvider="target">
@@ -303,6 +303,7 @@
                             <constraint firstAttribute="bottom" secondItem="if7-R7-g8V" secondAttribute="bottom" id="gSb-1R-JSD"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Gallery" image="photo" catalog="system" id="XXI-gf-uLV"/>
                     <navigationItem key="navigationItem" title="TrailGazer" id="LaS-Bo-eDE">
                         <barButtonItem key="backBarButtonItem" title=" " id="3DH-ur-kyc"/>
                         <barButtonItem key="leftBarButtonItem" title="Log Out" id="Tgq-Yz-eLC">
@@ -324,12 +325,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U0B-Ms-PlK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="990.76923076923072" y="711.61137440758296"/>
+            <point key="canvasLocation" x="1920" y="711.61137440758296"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Gallery-->
         <scene sceneID="Yly-CZ-AY4">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bic-nN-P4M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="FeedNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="DAh-Kx-zT3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Gallery" image="photo" catalog="system" id="d6c-OU-NcS"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CNt-Tn-v14">
                         <rect key="frame" x="0.0" y="47" width="390" height="44"/>
@@ -341,23 +344,22 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="B7P-0a-zzW" kind="relationship" relationship="rootViewController" id="9Of-nk-pmx"/>
+                        <segue destination="D49-nA-hPQ" kind="relationship" relationship="rootViewController" id="pl6-On-kIG"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bic-nN-P4M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="254" y="712"/>
+            <point key="canvasLocation" x="1056.9230769230769" y="711.61137440758296"/>
         </scene>
         <!--Post View Controller-->
         <scene sceneID="E77-Ui-z4h">
             <objects>
                 <viewController id="3KS-34-J8g" customClass="PostViewController" customModule="TrailGazer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7HF-Hn-SEO">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="834"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="AbP-mJ-psD">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="432"/>
+                                <rect key="frame" x="0.0" y="91" width="390" height="432"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write a caption..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Amx-Rq-yFI">
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="34"/>
@@ -425,7 +427,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1748" y="712"/>
+            <point key="canvasLocation" x="2676.9230769230767" y="711.61137440758296"/>
         </scene>
         <!--HomeView-->
         <scene sceneID="Tje-QP-81E">
@@ -462,10 +464,49 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ugr-1X-DuJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="990.76923076923072" y="1416.824644549763"/>
+            <point key="canvasLocation" x="1920" y="1428"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="rdv-qK-Eom">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarController" automaticallyAdjustsScrollViewInsets="NO" id="DHf-4y-LxW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="81o-B2-xpX">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="I8i-cc-mle" kind="relationship" relationship="viewControllers" id="fXn-Gw-4Mf"/>
+                        <segue destination="DAh-Kx-zT3" kind="relationship" relationship="viewControllers" id="J9k-j4-EFQ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U87-2G-wCy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="127.69230769230769" y="711.61137440758296"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="swk-bF-yof">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="I8i-cc-mle" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" selectedImage="house" id="PR2-um-UIM"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qFa-44-6En">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="B7P-0a-zzW" kind="relationship" relationship="rootViewController" id="eFb-bk-sn5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vrE-7X-Tcv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1057" y="1428"/>
         </scene>
     </scenes>
     <resources>
+        <image name="house" catalog="system" width="128" height="104"/>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="photo" catalog="system" width="128" height="93"/>
         <image name="photo.artframe" catalog="system" width="128" height="93"/>
         <image name="plus.app" catalog="system" width="128" height="114"/>
@@ -473,16 +514,16 @@
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="quaternaryLabelColor">
-            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.1764705882" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.17647058823529413" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="secondaryLabelColor">
-            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemCyanColor">
-            <color red="0.1960784314" green="0.67843137249999996" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
