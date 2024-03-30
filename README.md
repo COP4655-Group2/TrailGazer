@@ -47,8 +47,8 @@ TrailGazer is a dynamic running app designed to allow users to capture stunning 
 
 **Optional Nice-to-have Stories**
 
-* [] User can persist user information across working sessions
-* [] User can persist user log in credentials on multiple app launches
+* [x] User can persist user information across working sessions
+* [x] User can persist user log in credentials on multiple app launches
 * [] User can change their app theme to dark mode
 * [] User can put a profile picture
 * [] User can check average exercising statistics
