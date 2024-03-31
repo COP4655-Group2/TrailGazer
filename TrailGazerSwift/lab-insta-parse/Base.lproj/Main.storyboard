@@ -289,6 +289,7 @@
                                             <outlet property="dateLabel" destination="fUP-Sn-Nbi" id="ou4-Bl-xg1"/>
                                             <outlet property="postImageView" destination="G25-6h-Uyo" id="ZGC-qp-QRH"/>
                                             <outlet property="usernameLabel" destination="dQG-0t-OMT" id="eyh-yc-1i3"/>
+                                            <segue destination="Oul-vl-P06" kind="showDetail" id="ob1-Ul-bws"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -325,7 +326,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U0B-Ms-PlK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1920" y="711.61137440758296"/>
+            <point key="canvasLocation" x="2038" y="751"/>
         </scene>
         <!--Gallery-->
         <scene sceneID="Yly-CZ-AY4">
@@ -435,22 +436,30 @@
             </objects>
             <point key="canvasLocation" x="2849" y="712"/>
         </scene>
-        <!--Post Detail View Controller-->
-        <scene sceneID="Y0g-m8-KFd">
+        <!--PostDetailViewController-->
+        <scene sceneID="8UG-H3-5sK">
             <objects>
-                <viewController id="UiS-Xc-ToY" customClass="PostDetailViewController" customModule="TrailGazer" customModuleProvider="target" sceneMemberID="viewController">
-                    <mapView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="de4-lE-bqY">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <standardMapConfiguration key="preferredConfiguration"/>
-                    </mapView>
+                <viewController storyboardIdentifier="PostDetailViewController" id="Oul-vl-P06" userLabel="PostDetailViewController" customClass="PostDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="prQ-aU-IHh">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="834"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="detailMapView" translatesAutoresizingMaskIntoConstraints="NO" id="Oxa-4N-WQQ" userLabel="detailMapView">
+                                <rect key="frame" x="0.0" y="166" width="390" height="465"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yDF-2G-V40"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
                     <connections>
-                        <outlet property="mapView" destination="de4-lE-bqY" id="Ceg-1L-29V"/>
+                        <outlet property="detailMapView" destination="Oxa-4N-WQQ" id="tSf-6b-OZ6"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Pd2-Ra-Aoa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b1F-rU-RaG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3865" y="576"/>
+            <point key="canvasLocation" x="3671" y="1040"/>
         </scene>
         <!--HomeView-->
         <scene sceneID="Tje-QP-81E">

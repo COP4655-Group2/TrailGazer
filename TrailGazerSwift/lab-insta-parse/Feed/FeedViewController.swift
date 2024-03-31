@@ -17,7 +17,7 @@ class FeedViewController: UIViewController {
 
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.allowsSelection = false
+        tableView.allowsSelection = true
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -71,13 +71,17 @@ class FeedViewController: UIViewController {
         alertController.addAction(action)
         present(alertController, animated: true)
     }
+    
+    
+    
+
 }
 
 extension FeedViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as? PostCell else {
             return UITableViewCell()
@@ -89,8 +93,32 @@ extension FeedViewController: UITableViewDataSource {
         
         
     }
-    
-    
 }
+    
+    extension FeedViewController: UITableViewDelegate{
+        
+        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            let post = posts[indexPath.row]
+            
+        }
+        
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            
+            if let cell = sender as? UITableViewCell,
+               // Get the index path of the cell from the table view
+               let indexPath = tableView.indexPath(for: cell),
+               // Get the detail view controller
+               let PostDetailViewController = segue.destination as? PostDetailViewController {
+                
+                
+                let post = posts[indexPath.row]
+                
+                
+                PostDetailViewController.post = post
+            }
+            
+        }
+        
+    }
 
-extension FeedViewController: UITableViewDelegate { }
+

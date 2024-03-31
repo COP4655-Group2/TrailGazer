@@ -2,7 +2,6 @@ import Foundation
 import UIKit
 import CoreLocation
 import ParseSwift
-import CoreLocationUI
 
 
     
@@ -19,6 +18,7 @@ struct Post: ParseObject {
     var caption: String?
     var user: User?
     var imageFile: ParseFile?
+    var location: ParseGeoPoint?
 
     
 

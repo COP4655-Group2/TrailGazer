@@ -1,18 +1,34 @@
 import UIKit
 import PhotosUI
 import ParseSwift
+import CoreLocation
 
-class PostViewController: UIViewController {
+
+class PostViewController: UIViewController, CLLocationManagerDelegate {
 
 
     @IBOutlet weak var shareButton: UIBarButtonItem!
     @IBOutlet weak var captionTextField: UITextField!
     @IBOutlet weak var previewImageView: UIImageView!
+    
+    private var locationManager = CLLocationManager()
+    private var currentLocation: CLLocation?
 
     private var pickedImage: UIImage?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.first {
+            currentLocation = location
+        }
     }
 
     @IBAction func onPickedImageTapped(_ sender: UIBarButtonItem) {
@@ -38,20 +54,31 @@ class PostViewController: UIViewController {
 
         guard let image = pickedImage,
 
-              let imageData = image.jpegData(compressionQuality: 0.1) else {
+              let imageData = image.jpegData(compressionQuality: 0.1),
+              let currentLocation = currentLocation
+        else {
             return
+            
         }
 
         let imageFile = ParseFile(name: "image.jpg", data: imageData)
+        
+        
 
         var post = Post()
         post.imageFile = imageFile
         post.caption = captionTextField.text
 
         post.user = User.current
+        try? post.location = ParseGeoPoint(latitude: currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude)
+        
+
 
         post.save { [weak self] result in
             
+            
+            
+      
             // Get the current user
             if var currentUser = User.current {
 

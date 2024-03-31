@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6A1A0CD12BB9DA8B0075D2D5 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1A0CCF2BB9DA8B0075D2D5 /* StatisticsViewController.swift */; };
-		6A1A0CD72BB9E3700075D2D5 /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1A0CD62BB9E3700075D2D5 /* PostDetailViewController.swift */; };
+		6A1A0CD92BB9F8F10075D2D5 /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1A0CD82BB9F8F10075D2D5 /* PostDetailViewController.swift */; };
 		6AA0253D2BB5F80E00C8C5E7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA0253C2BB5F80E00C8C5E7 /* HomeViewController.swift */; };
 		CB13E51F2913A16C008F45BB /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB13E51E2913A16C008F45BB /* PostCell.swift */; };
 		CB13E5212913B10B008F45BB /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB13E5202913B10B008F45BB /* DateFormatter+Extensions.swift */; };
@@ -30,7 +30,7 @@
 
 /* Begin PBXFileReference section */
 		6A1A0CCF2BB9DA8B0075D2D5 /* StatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
-		6A1A0CD62BB9E3700075D2D5 /* PostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
+		6A1A0CD82BB9F8F10075D2D5 /* PostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
 		6AA0253C2BB5F80E00C8C5E7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CB13E51E2913A16C008F45BB /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		CB13E5202913B10B008F45BB /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
@@ -92,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				CBCDFAFD291144DA001F1CF1 /* PostViewController.swift */,
+				6A1A0CD82BB9F8F10075D2D5 /* PostDetailViewController.swift */,
 			);
 			path = Post;
 			sourceTree = "<group>";
@@ -101,7 +102,6 @@
 			children = (
 				CB6997522911354B007EDA6B /* FeedViewController.swift */,
 				CB13E51E2913A16C008F45BB /* PostCell.swift */,
-				6A1A0CD62BB9E3700075D2D5 /* PostDetailViewController.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -252,7 +252,7 @@
 				CBCDFAFE291144DA001F1CF1 /* PostViewController.swift in Sources */,
 				CB73D399290E3B4A00C12538 /* LoginViewController.swift in Sources */,
 				6A1A0CD12BB9DA8B0075D2D5 /* StatisticsViewController.swift in Sources */,
-				6A1A0CD72BB9E3700075D2D5 /* PostDetailViewController.swift in Sources */,
+				6A1A0CD92BB9F8F10075D2D5 /* PostDetailViewController.swift in Sources */,
 				CB73D395290E3B4A00C12538 /* AppDelegate.swift in Sources */,
 				CB6997532911354B007EDA6B /* FeedViewController.swift in Sources */,
 				CB7896EF2935DC4E00635932 /* User.swift in Sources */,
