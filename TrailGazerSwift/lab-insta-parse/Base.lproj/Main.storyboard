@@ -433,7 +433,24 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2676.9230769230767" y="711.61137440758296"/>
+            <point key="canvasLocation" x="2849" y="712"/>
+        </scene>
+        <!--Post Detail View Controller-->
+        <scene sceneID="Y0g-m8-KFd">
+            <objects>
+                <viewController id="UiS-Xc-ToY" customClass="PostDetailViewController" customModule="TrailGazer" customModuleProvider="target" sceneMemberID="viewController">
+                    <mapView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="de4-lE-bqY">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <standardMapConfiguration key="preferredConfiguration"/>
+                    </mapView>
+                    <connections>
+                        <outlet property="mapView" destination="de4-lE-bqY" id="Ceg-1L-29V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pd2-Ra-Aoa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3865" y="576"/>
         </scene>
         <!--HomeView-->
         <scene sceneID="Tje-QP-81E">
@@ -631,7 +648,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5fb-Pg-5Hb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1083.0769230769231" y="1908.7677725118483"/>
+            <point key="canvasLocation" x="1889" y="2118"/>
         </scene>
         <!--Stats-->
         <scene sceneID="Cke-HG-Svi">
@@ -650,7 +667,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xNc-mJ-njS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="153.84615384615384" y="1908.7677725118483"/>
+            <point key="canvasLocation" x="960" y="2118"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

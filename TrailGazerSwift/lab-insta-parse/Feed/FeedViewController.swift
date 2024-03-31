@@ -1,13 +1,5 @@
-//
-//  FeedViewController.swift
-//  lab-insta-parse
-//
-//  Created by Charlie Hieger on 11/1/22.
-//
-
 import UIKit
-
-// TODO: Import Parse Swift
+import ParseSwift
 
 
 class FeedViewController: UIViewController {
@@ -16,7 +8,6 @@ class FeedViewController: UIViewController {
 
     private var posts = [Post]() {
         didSet {
-            // Reload table view data any time the posts variable gets updated.
             tableView.reloadData()
         }
     }
@@ -24,9 +15,9 @@ class FeedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //tableView.delegate = self
-        //tableView.dataSource = self
-        //tableView.allowsSelection = false
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.allowsSelection = false
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -36,8 +27,25 @@ class FeedViewController: UIViewController {
     }
 
     private func queryPosts() {
-        // TODO: Pt 1 - Query Posts
-// https://github.com/parse-community/Parse-Swift/blob/3d4bb13acd7496a49b259e541928ad493219d363/ParseSwift.playground/Pages/2%20-%20Finding%20Objects.xcplaygroundpage/Contents.swift#L66
+         
+        let yesterdayDate = Calendar.current.date(byAdding: .day, value: (-1), to: Date())!
+        
+        let query = Post.query()
+            .include("user")
+            .order([.descending("createdAt")])
+            .where("createdAt" >= yesterdayDate) // <- Only include results created yesterday onwards
+            .limit(10) // <- Limit max number of returned posts to 10
+
+        query.find { [weak self] result in
+            switch result {
+            case .success(let posts):
+
+                self?.posts = posts
+            case .failure(let error):
+                self?.showAlert(description: error.localizedDescription)
+            }
+        }
+
 
 
     }
@@ -75,8 +83,14 @@ extension FeedViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         cell.configure(with: posts[indexPath.row])
+        
+        
         return cell
+        
+        
     }
+    
+    
 }
 
 extension FeedViewController: UITableViewDelegate { }
