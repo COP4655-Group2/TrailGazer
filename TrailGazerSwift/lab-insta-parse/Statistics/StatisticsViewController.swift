@@ -10,6 +10,7 @@ import CoreLocation
 
 class StatisticsViewController: UIViewController, CLLocationManagerDelegate {
     
+    @IBOutlet weak var distanceTraveledLabel: UILabel!
     
     //Line 14 to 146 are all for the Timer feature
     @IBOutlet weak var timeLabel: UILabel!
