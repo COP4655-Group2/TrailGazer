@@ -1,4 +1,5 @@
 import UIKit
+import CoreLocation
 import ParseSwift
 
 
@@ -103,21 +104,19 @@ extension FeedViewController: UITableViewDataSource {
         }
         
         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            
             if let cell = sender as? UITableViewCell,
-               // Get the index path of the cell from the table view
                let indexPath = tableView.indexPath(for: cell),
-               // Get the detail view controller
-               let PostDetailViewController = segue.destination as? PostDetailViewController {
-                
-                
+               let postDetailViewController = segue.destination as? PostDetailViewController {
                 let post = posts[indexPath.row]
-                
-                
-                PostDetailViewController.post = post
+                postDetailViewController.post = post
+
+                if let geoPoint = post.location {
+                    let location = CLLocation(latitude: geoPoint.latitude, longitude: geoPoint.longitude)
+                    postDetailViewController.location = location
+                }
             }
-            
         }
+
         
     }
 

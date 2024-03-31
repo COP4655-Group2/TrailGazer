@@ -439,7 +439,7 @@
         <!--PostDetailViewController-->
         <scene sceneID="8UG-H3-5sK">
             <objects>
-                <viewController storyboardIdentifier="PostDetailViewController" id="Oul-vl-P06" userLabel="PostDetailViewController" customClass="PostDetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PostDetailViewController" id="Oul-vl-P06" userLabel="PostDetailViewController" customClass="PostDetailViewController" customModule="TrailGazer" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="prQ-aU-IHh">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -454,7 +454,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="detailMapView" destination="Oxa-4N-WQQ" id="tSf-6b-OZ6"/>
+                        <outlet property="detailMapView" destination="Oxa-4N-WQQ" id="V0A-VX-avQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b1F-rU-RaG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
