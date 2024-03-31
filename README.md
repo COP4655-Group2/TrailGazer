@@ -13,6 +13,11 @@ CodePath iOS102 Module 7-10 Group Project
 
 ## Overview
 
+****GIF FILE SIZE TOO BIG TO LINK HERE, PLEASE SEE DEMO VIDEO BELOW IN ADDITION TO LAST WEEK'S GIF****
+
+****DEMO PREP VIDEO****
+[![Demo Prep Video](https://img.youtube.com/vi/mUOjqJGc77g/0.jpg)](https://www.youtube.com/watch?v=mUOjqJGc77g)]
+
 ****PROGRESS GIF AS OF WEEK 2****
 ![Progress GIF](https://github.com/COP4655-Group2/TrailGazer/assets/24413909/0fb68d0e-eff5-4562-9d63-110e0e9d9e63)
 
