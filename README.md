@@ -40,8 +40,8 @@ TrailGazer is a dynamic running app designed to allow users to capture stunning 
 
 * [x] User can create a new account
 * [x] User can login to account
-* [] User can upload pictures
-* [] User can check location of pictures on a map
+* [x] User can upload pictures
+* [x] User can check location of pictures on a map
 * [] User can check distance traveled per day
 * [] User can check exercise statistics per day
 
